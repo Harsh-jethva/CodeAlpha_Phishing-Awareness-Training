@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Phishing Awareness Training</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@500&family=Orbitron:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="cyber-theme">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <div>
+            <p class="brand-kicker">Security awareness</p>
+            <h1 class="brand-title">Phishing Awareness Training</h1>
+          </div>
+        </div>
+        <p class="brand-tagline">
+          Learn to spot deceptive emails, fake sites, and social engineering — then test yourself.
+        </p>
+      </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Module sections">
+      <div class="nav-inner">
+        <a href="#recognition">Recognition</a>
+        <a href="#social-engineering">Social engineering</a>
+        <a href="#best-practices">Best practices</a>
+        <a href="#examples">Examples</a>
+        <a href="#quiz" class="nav-quiz">Quiz</a>
+      </div>
+    </nav>
+
+    <main id="main">
+      <section id="recognition" class="panel">
+        <h2>Recognizing phishing emails and fake websites</h2>
+        <p class="lead">
+          Phishing tries to steal credentials, money, or access by pretending to be someone you trust.
+        </p>
+        <ul class="checklist">
+          <li>
+            Sender addresses may mimic a brand (for example
+            <span class="mono">support@paypa1-security.com</span>).
+          </li>
+          <li>Links often hide the real destination — hover or long-press before clicking.</li>
+          <li>
+            Urgent threats (“account suspended today”) pressure you to act without thinking.
+          </li>
+          <li>
+            Requests for passwords, MFA codes, or remote access are almost never legitimate.
+          </li>
+          <li>
+            Fake sites may use typosquatting (<span class="mono">faceboook.com</span>), HTTP-only login
+            pages, or odd fonts.
+          </li>
+        </ul>
+      </section>
+
+      <section id="social-engineering" class="panel">
+        <h2>Social engineering tactics</h2>
+        <p class="lead">
+          Attackers manipulate people, not just computers. Knowing their playbook helps you resist it.
+        </p>
+        <ul class="checklist">
+          <li><strong>Pretexting:</strong> inventing a scenario (IT audit, vendor callback).</li>
+          <li>
+            <strong>Authority:</strong> impersonating executives or government to demand compliance.
+          </li>
+          <li><strong>Urgency and fear:</strong> artificial deadlines to bypass verification.</li>
+          <li>
+            <strong>Familiarity:</strong> referencing coworkers or projects from public sources.
+          </li>
+          <li><strong>Helpfulness:</strong> offering “support” to harvest credentials.</li>
+        </ul>
+      </section>
+
+      <section id="best-practices" class="panel">
+        <h2>Best practices</h2>
+        <p class="lead">Simple habits dramatically reduce risk — use them every day.</p>
+        <ul class="checklist">
+          <li>
+            Verify out-of-band: call a known number from the company website, not from the email.
+          </li>
+          <li>
+            Use bookmarked URLs for banking and email; avoid links in unexpected messages.
+          </li>
+          <li>Enable MFA on important accounts; prefer app-based or hardware keys.</li>
+          <li>
+            Report suspicious mail via your security team or your provider’s report-phishing option.
+          </li>
+          <li>Keep software updated; use a password manager for unique strong passwords.</li>
+        </ul>
+      </section>
+
+      <section id="examples" class="panel">
+        <h2>Real-world examples</h2>
+        <p class="lead">These patterns show up across industries — the details change, the tricks don’t.</p>
+        <div class="cards">
+          <article class="card">
+            <h3>CEO fraud</h3>
+            <p>
+              An urgent email from “the CEO” asks you to buy gift cards for a client and send the codes
+              by reply. The reply-to domain is slightly wrong.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Tax / refund lure</h3>
+            <p>
+              A message claims you’re owed a refund and must “confirm” bank details on a site that
+              looks like your government portal — but the URL is unrelated.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Shared-file trap</h3>
+            <p>
+              You get a “shared document” notification from a service you use; the button goes to a
+              login page that steals your password.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="quiz" class="panel panel-quiz">
+        <h2>Interactive quiz</h2>
+        <p class="lead">
+          Each session draws random questions from the bank and shuffles answers — explanations appear after
+          each item.
+        </p>
+
+        <div id="quiz-root" class="quiz-root">
+          <p id="quiz-progress" class="quiz-progress" aria-live="polite"></p>
+          <div id="quiz-question-wrap" class="quiz-question-wrap" hidden>
+            <p id="quiz-prompt" class="quiz-prompt"></p>
+            <fieldset id="quiz-fieldset" class="quiz-fieldset">
+              <legend class="visually-hidden">Select one answer</legend>
+              <div id="quiz-options" class="quiz-options"></div>
+            </fieldset>
+            <div class="quiz-actions">
+              <button type="button" id="quiz-submit" class="btn primary">Check answer</button>
+              <button type="button" id="quiz-next" class="btn" hidden>Next question</button>
+            </div>
+            <div
+              id="quiz-feedback"
+              class="quiz-feedback"
+              role="status"
+              aria-live="polite"
+              hidden
+            ></div>
+          </div>
+          <div id="quiz-results" class="quiz-results" hidden>
+            <p id="quiz-score" class="quiz-score"></p>
+            <button type="button" id="quiz-retry" class="btn primary">Try again</button>
+          </div>
+          <button type="button" id="quiz-start" class="btn primary quiz-start">Start quiz</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Phishing Awareness Training · For education only · Stay skeptical, stay safe.</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
